@@ -19,5 +19,8 @@
   "homepage": "https://github.com/geshan/expressjs-structure#readme",
   "dependencies": {
     "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "jest": "^27.4.5"
   }
 }
