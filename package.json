@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -18,9 +18,17 @@
   },
   "homepage": "https://github.com/geshan/expressjs-structure#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "mysql2": "^2.3.3"
   },
   "devDependencies": {
     "jest": "^27.4.5"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ],
+    "testRegex": "(/test/.*|(\\.|/)(test))\\.(js)x?$"
   }
 }
