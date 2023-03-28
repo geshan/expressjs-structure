@@ -1,5 +1,5 @@
 const general = {
- listPerPage: 10
-};
+  listPerPage: 10,
+}
 
-module.exports = general;
+module.exports = general

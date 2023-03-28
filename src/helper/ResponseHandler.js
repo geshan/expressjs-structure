@@ -1,4 +1,4 @@
-export const successResponse = (res, msg) => {
+export const CompletionResponse = (res, msg) => {
   var data = {
     status: 1,
     code: 200,
@@ -7,7 +7,7 @@ export const successResponse = (res, msg) => {
   return res.status(200).json(data)
 }
 
-export const successResponseWithData = (res, msg, data) => {
+export const CompletionResponseAlongValue = (res, msg, data) => {
   var resData = {
     status: 1,
     code: 200,
@@ -17,7 +17,7 @@ export const successResponseWithData = (res, msg, data) => {
   return res.status(200).json(resData)
 }
 
-export const errorResponse = (res, msg) => {
+export const ErrorStatus = (res, msg) => {
   var data = {
     status: 0,
     code: 500,
@@ -26,7 +26,7 @@ export const errorResponse = (res, msg) => {
   return res.status(500).json(data)
 }
 
-export const notFoundResponse = (res, msg) => {
+export const NotAvailable = (res, msg) => {
   var data = {
     status: 0,
     code: 404,
@@ -44,7 +44,7 @@ export const AlreadyExists = (res, msg) => {
   return res.status(400).json(data)
 }
 
-export const validationErrorWithData = (res, msg, data) => {
+export const ValidationValues = (res, msg, data) => {
   var resData = {
     status: 0,
     code: 400,
@@ -53,7 +53,7 @@ export const validationErrorWithData = (res, msg, data) => {
   }
   return res.status(400).json(resData)
 }
-export const serverErrorWithData = (res, msg, data) => {
+export const BackendErrorWithValues = (res, msg, data) => {
   var resData = {
     status: 0,
     code: 500,
@@ -63,7 +63,7 @@ export const serverErrorWithData = (res, msg, data) => {
   return res.status(500).json(resData)
 }
 
-export const unauthorizedResponse = (res, msg) => {
+export const UnaccessValues = (res, msg) => {
   var data = {
     status: 0,
     message: msg,
@@ -71,7 +71,7 @@ export const unauthorizedResponse = (res, msg) => {
   }
   return res.status(401).json(data)
 }
-export const forbiddenResponse = (res, msg = 'Forbidden') => {
+export const NotAccessible = (res, msg = 'Forbidden') => {
   var data = {
     code: 403,
     status: 0,

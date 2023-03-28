@@ -1,11 +1,11 @@
 import validator from 'validator'
 import mongoose from 'mongoose'
 export default {
-  stringOnly: {
+  stringValue: {
     type: String,
     default: '',
   },
-  stringAndRequired: {
+  stringValueRequired: {
     type: String,
     required: true,
   },

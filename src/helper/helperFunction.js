@@ -1,8 +1,7 @@
-
-export const isEmail = (val) => {
+export const EmailValidation = (val) => {
   return /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(val.trim())
 }
-export const compareDate = (
+export const DatesMovements = (
   date1,
   date2 = new Date(),
   milisecondDiffrenece = 0,
@@ -16,10 +15,10 @@ export const compareDate = (
     return -1
   }
 }
-export const generateOTP = () => {
-  return Math.random().toString().substring(2, 8)
+export const createOtp = () => {
+  return Math.random().toString().substring(3, 10)
 }
 
-export const getRndInteger = (min, max) => {
+export const createRandomNumber = (min, max) => {
   return Math.floor(Math.random() * (max - min)) + min
 }
