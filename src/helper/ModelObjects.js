@@ -1,7 +1,7 @@
 import validator from 'validator'
 import mongoose from 'mongoose'
 export default {
-  stringValue: {
+  stringValueWithDefaultEmpty: {
     type: String,
     default: '',
   },
@@ -13,15 +13,19 @@ export default {
     type: mongoose.Schema.Types.Decimal128,
     default: 0,
   },
-  stringAndUnique: {
+  stringUniqueLowerCase: {
     type: String,
     required: true,
     unique: true,
     lowercase: true,
   },
-  numberOnly: {
-    type: Number,
+  stringUniqueUpperCase: {
+    type: String,
+    required: true,
+    unique: true,
+    uppercase: true,
   },
+
   NumberWithRequired: {
     type: Number,
     required: true,
@@ -57,6 +61,7 @@ export default {
     type: String,
     default: 'Pending',
   },
+
   enumAndRequired: (list) => {
     return {
       type: String,
@@ -64,13 +69,7 @@ export default {
       required: true,
     }
   },
-  booleanAndRequired: (defaultVal = 0) => {
-    return {
-      type: Boolean,
-      required: true,
-      default: defaultVal,
-    }
-  },
+
   boolean: (defaultVal = 0) => {
     return {
       type: Boolean,
