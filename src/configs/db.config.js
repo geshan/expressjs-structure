@@ -1,5 +1,5 @@
 const env = process.env;
-const fs = require('fs');
+import { readFileSync } from 'fs';
 const db = {
     host: env.DB_HOST,
     user: env.DB_USER,
@@ -8,8 +8,8 @@ const db = {
     port: env.DB_PORT || 3306,
     ssl: {
       mode: 'VERIFY_IDENTITY',
-      ca: fs.readFileSync('/etc/ssl/cert.pem', 'utf-8'),
+      ca: readFileSync('/etc/ssl/cert.pem', 'utf-8'),
     }
 };
 
-module.exports = db;
+export default db;
